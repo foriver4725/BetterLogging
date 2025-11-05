@@ -12,9 +12,9 @@ namespace foriver4725.BetterLogging
         private static readonly StringBuilder LogMessageSb = new(0xffff);
 
         /// <summary>
-        /// An API perfect for lazy people who find it troublesome to even set <see cref="LogSettings" />.<br/>
-        /// Just do <see cref='"Message".Print()' /> on a string and you're good to go.<br/>
-        /// <see cref="LogSettings.Normal" /> will be specified automatically.<br/>
+        /// A convenient API for those who want quick logging without any setup.<br/>
+        /// Simply call <see cref='"Message".Print()' /> on any string and it will be logged automatically.<br/>
+        /// Uses <see cref="LogSettings.Normal" /> by default.<br/>
         /// </summary>
         [Conditional(ScriptingDefine)]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -27,9 +27,9 @@ namespace foriver4725.BetterLogging
             => message.Print(LogSettings.Normal, callerFilePath, callerLineNumber, callerMemberName);
 
         /// <summary>
-        /// Hybrid API of ease and freedom<br/>
-        /// It is recommended to set <see cref="LogSettings" /> from templates<br/>
-        /// Such as <see cref="LogSettings.Normal" />, <see cref="LogSettings.Warning" />, <see cref="LogSettings.Error" /><br/>
+        /// A balanced API combining simplicity and flexibility.<br/>
+        /// You can choose a preset from <see cref="LogSettings" /> such as<br/>
+        /// <see cref="LogSettings.Normal" />, <see cref="LogSettings.Warning" />, or <see cref="LogSettings.Error" />.<br/>
         /// </summary>
         [Conditional(ScriptingDefine)]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -43,9 +43,8 @@ namespace foriver4725.BetterLogging
             => message.Print(settings, settings.GetColor(), callerFilePath, callerLineNumber, callerMemberName);
 
         /// <summary>
-        /// The most core API<br/>
-        /// The most settings items<br/>
-        /// You can specify the color freely<br/>
+        /// The core API providing full control over output.<br/>
+        /// Allows manual color specification and detailed customization.<br/>
         /// </summary>
         [Conditional(ScriptingDefine)]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
