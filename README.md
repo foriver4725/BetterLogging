@@ -37,13 +37,11 @@ To enable the logging features, add the following symbol to **Project Settings �
 BETTER_LOGGING
 ```
 
-If this symbol is not defined, the library’s assembly will remain disabled and none of the logging APIs will be included
-in the build.
-
-This library’s assembly is **editor-only**, meaning it is always excluded from build data regardless of whether the
-scripting define symbol is set.  
-In other words, the logging functionality is only available within the Unity Editor and will never be included in player
-builds.
+The availability of this library’s functionality depends solely on whether the scripting define symbol is set.  
+For example, by using the **Build Profiles** feature introduced in Unity 6 or later, you can define this symbol only for
+the **Debug** build.  
+This allows you to completely exclude the logging functionality from **Release** builds while keeping it active in
+**Debug** builds.
 
 ## Usage
 
