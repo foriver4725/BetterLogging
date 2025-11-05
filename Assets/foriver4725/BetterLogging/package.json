@@ -1,0 +1,19 @@
+{
+  "name": "com.foriver4725.better-logging",
+  "displayName": "Better Logging",
+  "author": {
+    "name": "foriver4725",
+    "url": "https://github.com/foriver4725"
+  },
+  "version": "1.0.0",
+  "unity": "6000.0",
+  "description": "Wraps Unity’s native logging methods (such as Debug.Log) and provides a more convenient interface.",
+  "keywords": [
+    "BetterLogging",
+    "Logging",
+    "Logger",
+    "Log",
+    "Debug"
+  ],
+  "license": "MIT"
+}
