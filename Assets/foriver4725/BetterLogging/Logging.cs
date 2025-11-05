@@ -7,7 +7,7 @@ namespace foriver4725.BetterLogging
 {
     public static class Logging
     {
-        private const string ScriptingDefine = "BETTER_LOGGING";
+        private const string ScriptingDefineSymbol = "BETTER_LOGGING";
 
         private static readonly StringBuilder LogMessageSb = new(0xffff);
 
@@ -16,7 +16,7 @@ namespace foriver4725.BetterLogging
         /// Simply call <see cref='"Message".Print()' /> on any string and it will be logged automatically.<br/>
         /// Uses <see cref="LogSettings.Normal" /> by default.<br/>
         /// </summary>
-        [Conditional(ScriptingDefine)]
+        [Conditional(ScriptingDefineSymbol)]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Print(
             this object message,
@@ -31,7 +31,7 @@ namespace foriver4725.BetterLogging
         /// You can choose a preset from <see cref="LogSettings" /> such as<br/>
         /// <see cref="LogSettings.Normal" />, <see cref="LogSettings.Warning" />, or <see cref="LogSettings.Error" />.<br/>
         /// </summary>
-        [Conditional(ScriptingDefine)]
+        [Conditional(ScriptingDefineSymbol)]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Print(
             this object message,
@@ -46,7 +46,7 @@ namespace foriver4725.BetterLogging
         /// The core API providing full control over output.<br/>
         /// Allows manual color specification and detailed customization.<br/>
         /// </summary>
-        [Conditional(ScriptingDefine)]
+        [Conditional(ScriptingDefineSymbol)]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Print(
             this object message,
