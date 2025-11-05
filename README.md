@@ -19,9 +19,9 @@ and improve visual clarity.
 The library also automatically appends information such as the source script, line number, and calling method name below
 each log message, providing a quick and readable context for debugging.
 
-## How to Use
+## Installation & Setup
 
-Install via UPM:
+Install via Unity Package Manager (UPM):
 
 ```
 https://github.com/foriver4725/BetterLogging.git?path=Assets/foriver4725/BetterLogging
@@ -45,9 +45,9 @@ scripting define symbol is set.
 In other words, the logging functionality is only available within the Unity Editor and will never be included in player
 builds.
 
-## Usage Examples
+## Usage
 
-You can easily explore all available APIs through
+You can explore all available APIs in
 the [sample code here](https://github.com/foriver4725/BetterLogging/blob/main/Assets/foriver4725/BetterLogging/Tests/LoggingTests.cs).
 
 ---
@@ -64,9 +64,9 @@ If you want to distinguish between different log levels such as normal, warning,
 case — you can write:
 
 ```csharp
-"This is a  normal  message.".Print(LogSettings.Normal);
-"This is a  warning message.".Print(LogSettings.Warning);
-"This is an error   message.".Print(LogSettings.Error);
+"This is a normal message.".Print(LogSettings.Normal);
+"This is a warning message.".Print(LogSettings.Warning);
+"This is an error message.".Print(LogSettings.Error);
 ```
 
 `LogSettings.Normal` is equivalent to the version shown above without explicitly specifying a log type.  
@@ -100,3 +100,18 @@ Finally, for maximum flexibility, you can directly specify the log color yoursel
 ```
 
 This is the core API of the library — all other logging methods internally delegate to this one.
+
+## Dummy Class (for Global Using)
+
+This section applies only if your project supports **C# Global Using**.
+
+If you want to explicitly prevent the use of `UnityEngine.Debug`, it is recommended to define a global using directive
+as follows:
+
+```csharp
+global using Debug = foriver4725.BetterLogging.Dummy;
+```
+
+With this setup, any attempt to use `Debug.Log`, `Debug.LogWarning`, or `Debug.LogError` will result in a compile-time
+error.  
+This encourages team members to use the unified logging API provided by this library instead.
