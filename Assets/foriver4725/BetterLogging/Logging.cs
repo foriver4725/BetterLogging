@@ -74,13 +74,13 @@ namespace foriver4725.BetterLogging
         {
             LogMessageSb.Clear();
 
-            LogMessageSb.AppendFormat("<color=#{{2}}>{{1}}</color> : {{0}}\n",
-                                      message, settings.GetLevelName(), ColorUtility.ToHtmlStringRGB(overrideColor));
-            LogMessageSb.AppendFormat("Link : <a href=\"{{0}}\" line=\"{{1}}\">{{2}}</a>\n",
+            LogMessageSb.AppendFormat("<color=#{0}>{1}</color> : {2}\n",
+                                      ColorUtility.ToHtmlStringRGB(overrideColor), settings.GetLevelName(), message);
+            LogMessageSb.AppendFormat("Link : <a href=\"{0}\" line=\"{1}\">{2}</a>\n",
                                       callerFilePath, callerLineNumber, callerMemberName);
-            LogMessageSb.AppendFormat("Caller File Path : {{0}}\n", callerFilePath);
-            LogMessageSb.AppendFormat("Caller Line Number : {{0}}\n", callerLineNumber);
-            LogMessageSb.AppendFormat("Caller Member Name : {{0}}\n", callerMemberName);
+            LogMessageSb.AppendFormat("Caller File Path : {0}\n", callerFilePath);
+            LogMessageSb.AppendFormat("Caller Line Number : {0}\n", callerLineNumber);
+            LogMessageSb.AppendFormat("Caller Member Name : {0}\n", callerMemberName);
             LogMessageSb.Append(
                 "\n====================================================================================================\n\n");
 
