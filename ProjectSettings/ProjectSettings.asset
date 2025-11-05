@@ -822,7 +822,7 @@ PlayerSettings:
   webGLCloseOnQuit: 0
   webWasm2023: 0
   scriptingDefineSymbols:
-    Standalone: BETTER_LOGGING
+    Standalone: BETTER_LOGGING;BETTER_LOGGING_TESTS
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
