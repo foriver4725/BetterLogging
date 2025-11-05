@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace foriver4725.BetterLogging.Tests
 {
-    public static class LoggingTests
+    internal static class LoggingTests
     {
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void Init()
