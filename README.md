@@ -1,5 +1,8 @@
 # BetterLogging
 
+Available in other languages:  
+[中文版本](./README_CN.md) ｜ [日本語版](./README_JP.md)
+
 ## Description
 
 This library provides a set of wrapper APIs for Unity’s native logging methods — `Debug.Log`, `Debug.LogWarning`, and
